@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".HomeFragment">
+    <EditText
+        android:id="@+id/etTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_marginTop="5dp"
+        android:hint="Search your item here"
+        android:drawableLeft="@drawable/ic_baseline_search_24"
+        android:background="@drawable/tv_shape"
+        app:layout_constraintLeft_toLeftOf="@id/guideline2"
+        app:layout_constraintTop_toTopOf="@id/guideline4"/>
+    <TextView
+        android:id="@+id/tvProduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Popular Product"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="@id/etTitle"
+        app:layout_constraintTop_toBottomOf="@id/etTitle"
+        />
+    <TextView
+        android:id="@+id/tvView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View All"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="@id/etTitle"
+        app:layout_constraintTop_toBottomOf="@id/etTitle"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        app:layout_constraintLeft_toLeftOf="@id/guideline2"
+        app:layout_constraintRight_toRightOf="@id/guideline5"
+        app:layout_constraintTop_toBottomOf="@id/tvProduct"
+        />
+    <LinearLayout
+        android:id="@+id/LinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/recyclerview"
+        app:layout_constraintTop_toBottomOf="@id/recyclerview"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:weightSum="10">
+        <TextView
+            android:id="@+id/tvExplore"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:text="Explore Categories"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textAlignment="textStart"
+            app:layout_constraintLeft_toLeftOf="@id/recyclerview"
+            app:layout_constraintTop_toBottomOf="@id/recyclerview"
+            />
+
+        <TextView
+            android:id="@+id/tvview"
+            android:textAlignment="textEnd"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="View All"
+
+            />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        app:layout_constraintLeft_toLeftOf="@id/LinearLayout"
+        app:layout_constraintTop_toBottomOf="@id/LinearLayout"/>
+    <LinearLayout
+        android:id="@+id/Linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/recycler"
+        app:layout_constraintTop_toBottomOf="@id/recycler"
+        android:orientation="horizontal"
+        android:weightSum="10">
+        <TextView
+            android:id="@+id/tvRecommend"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:text="Recommended"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textAlignment="textStart"
+            app:layout_constraintLeft_toLeftOf="@id/recyclerview"
+            app:layout_constraintTop_toBottomOf="@id/recyclerview"
+            />
+
+        <TextView
+            android:id="@+id/view"
+            android:textAlignment="textEnd"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="View All"
+
+            />
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        app:layout_constraintLeft_toLeftOf="@id/Linear"
+        app:layout_constraintTop_toBottomOf="@id/Linear"/>
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintGuide_percent="0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="1"
+        app:layout_constraintGuide_begin="20dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
